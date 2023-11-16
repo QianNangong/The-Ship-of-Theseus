@@ -1,0 +1,3 @@
+gcc.exe -O3 main.c -c -nostdlib -Qn -fno-asynchronous-unwind-tables
+windres.exe main.rc -o main_res.o
+ld.exe main.o main_res.o libkernel32.a libshell32.a -s --subsystem windows -nostdlib -o PBRUSH.EXE
